@@ -6,13 +6,31 @@
 #include <stack>
 using namespace std;
 
+int ValidPS(string s)
+{
+	stack<char> paren; // ( : 1  // ) : -1 // parenthesis
+
+	for (int i = 0; i < s.size(); i++)
+	{
+		if (s[i] == '(')
+			paren.push('(');
+		else
+		{
+			if (!paren.empty())
+				paren.pop();
+			else
+				return 0;
+		}
+	}
+	return s.empty();
+}
+
 int main()
 {
-	stack<int> brace; // ( : 1  // ) : -1
-	string input[60];
 	int T = 0;
-	int cntBrace;
+	string input[51];
 	cin >> T;
+
 	for (int i = 0; i < T; i++)
 	{
 		cin >> input[i];
@@ -20,27 +38,7 @@ int main()
 
 	for (int i = 0; i < T; i++)
 	{
-		cntBrace = 0;
-		
-		for (int j = 0; j < input[i].size(); j++)
-		{
-			if (input[i][0] != '(')
-			{
-				cout << "NO" << endl;
-				break;
-			}
-
-			if (input[i][j] == '(')
-				brace.push(1);
-			if (input[i][j] == ')')
-				brace.push(-1);
-		}
-		while (brace.size())
-		{
-			cntBrace += brace.top();
-			brace.pop();
-		}
-		if (cntBrace == 0)
+		if (ValidPS(input[i]))
 			cout << "YES" << endl;
 		else
 			cout << "NO" << endl;
