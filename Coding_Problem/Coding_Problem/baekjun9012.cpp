@@ -8,40 +8,45 @@ using namespace std;
 
 int ValidPS(string s)
 {
-	stack<char> paren; // ( : 1  // ) : -1 // parenthesis
+	stack<char> paren;  // parenthesis
 
-	for (int i = 0; i < s.size(); i++)
+ 	for (int i = 0; i < s.size(); i++)
 	{
 		if (s[i] == '(')
+		{
 			paren.push('(');
-		else
+
+		}
+		if (s[i] == ')')
 		{
 			if (!paren.empty())
+			{
 				paren.pop();
+
+			}
 			else
+			{
 				return 0;
+			}
 		}
 	}
-	return s.empty();
+	return paren.empty();
 }
 
 int main()
 {
 	int T = 0;
-	string input[51];
+	string input;
 	cin >> T;
-
-	for (int i = 0; i < T; i++)
+	while (T--)
 	{
-		cin >> input[i];
-	}
+		cin >> input;
 
-	for (int i = 0; i < T; i++)
-	{
-		if (ValidPS(input[i]))
+		if (ValidPS(input))
 			cout << "YES" << endl;
 		else
 			cout << "NO" << endl;
+
 	}
 
 	return 0;

@@ -41,7 +41,7 @@
     <ClCompile Include="baekjun10871.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Hacker_pointer.cpp">
+    <ClCompile Include="baekjun9012.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
