@@ -166,8 +166,12 @@
     <ClCompile Include="AdvencedDLLMain.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="JSONreader_ONGOING.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="DoublyLinkedList.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Database_Implement.cpp">
@@ -194,6 +198,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="data.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="example.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
