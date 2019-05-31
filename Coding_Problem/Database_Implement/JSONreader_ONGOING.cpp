@@ -3,14 +3,14 @@
 #include <string>
 #include <vector>
 using namespace std;
-#pragma region STATEMENT
+
 //Token type enum
 typedef enum {
 	TOKEN_STRING,
 	TOKEN_NUMBER
 } TOKEN_TYPE;
 //Token struct
-typedef struct {
+typedef struct _TOKEN{
 	TOKEN_TYPE type; // sort of token
 	union {			  // Make as union cuz we use one type
 		string string;
@@ -19,20 +19,14 @@ typedef struct {
 	bool isArray;
 } TOKEN;
 #define TOKEN_COUNT 20
-typedef struct {
+typedef struct _JSON{
 	TOKEN tokens[TOKEN_COUNT];
 } JSON;
-#pragma endregion
+//File Size
+const int FILE_SIZE = 500;
 
-string ReadFile(char *fileName, int *readSize);
-void ParseJSON(string doc, int size, JSON *json);
-int main()
-{
 
-	return 0;
-}
-
-string ReadFile(char *fileName, int * readSize)
+string ReadFile(const char *fileName, int * readSize)
 {
 	ifstream inFile(fileName);
 	if (inFile.is_open() == 0)
@@ -40,37 +34,37 @@ string ReadFile(char *fileName, int * readSize)
 		cout << "Not exist file" << endl;
 		return nullptr;
 	}
-	char buffer[300];
+	string tmp;
 	string sbuffer;
 	while (!inFile.eof())
 	{
-		inFile.getline(buffer, 200);
-		sbuffer += buffer;
+		inFile >> tmp;
+		sbuffer += tmp;
 	}
 	*readSize = sbuffer.size();
 	return sbuffer;
 }
 
-void ParseJSON(string doc, int size, JSON * json)
+JSON * ParseJSON(string doc, int size)
 {
 	int tokenIndex = 0;	// token Index
-	int pos = 0;		// variable
-
-	if (doc[pos] != '{')
-		return;
+	int pos = 0;		// string index position variable
+	pos = doc.find('{', 0);
+	if (pos == string::npos)
+		return nullptr;
 
 	pos++;		// to the next character
-
+	JSON * json = new JSON;
 	while (pos < size)	//repeat as much as size of file
 	{
 		switch (doc[pos])
 		{
 		case '"' :	// start symbol of text
 		{
-			int quotationIdx = doc.find('"', pos+1);
-			if (quotationIdx == string::npos)
+			int quoNextIdx = doc.find('\"', pos+1); // find '"' starting from pos+1
+			if (quoNextIdx == string::npos)  // if not found '"', return string::npos
 				break;
-			string strbuffer = doc.substr(pos, quotationIdx);
+			string strbuffer = doc.substr(pos + 1, quoNextIdx - (pos + 1)); // substr = return substring(extract from string)
 			
 			// Save value into token array
 			//(TOKEN_STRING)
@@ -88,4 +82,38 @@ void ParseJSON(string doc, int size, JSON * json)
 		// next to the other character
 		pos++;
 	}
+	return json;
+}
+
+void freeJSON()	// WE DON'T USE C, WE USE C++. SO WE DON'T NEED THIS LINE
+{
+	//void freeJSON(JSON *json)	// free JSON
+	//{
+	//	for (int i = 0; i < TOKEN_COUNT; i++)
+	//	{
+	//		if (json->tokens[i].type == TOKEN_STRING) // if TOKENTYPE is string
+	//			free(json->tokens[i].string);	// dynamic memory off
+	//	}
+	//}
+}
+
+int main()
+{
+	int size; // file size
+
+	// read from JSON file, get the size of JSON
+	string doc = {};
+	doc = ReadFile("example.json", &size);
+	if (doc[0] == '\0')
+		return -1;
+
+	// JSON struct declaration & initiation
+
+	JSON * json = ParseJSON(doc, size);
+
+	cout << "Title: " << json->tokens[1].string << endl;
+	cout << "Genre: " << json->tokens[3].string << endl;
+	cout << "Director: " << json->tokens[5].string << endl;
+
+	return 0;
 }
