@@ -19,6 +19,7 @@ mysort::MyArr::~MyArr()
 {
 	if (arr != nullptr)
 	{
+		std::cout << "Áö¿ü´Ù\n";
 		delete[] arr;
 		arrSize = 0;
 	}
@@ -57,6 +58,21 @@ void mysort::BubbleSort(int arr[], int & arrSize)
 	}
 }
 
+void mysort::SelectionSort(int arr[], int & arrSize)
+{
+	int minIdx = 0;
+	for (int i = 0; i < arrSize -1; i++)
+	{
+		minIdx = i;
+		for (int j = i+1; j < arrSize; j++)
+		{
+			if (arr[minIdx] > arr[j])
+				minIdx = j;
+		}
+		std::swap(arr[i], arr[minIdx]);
+	}
+}
+
 void mysort::GenerateRanArr(int arr[], const int & arrSize)
 {
 	srand((unsigned int)time(NULL));
@@ -84,5 +100,7 @@ void main()
 	defArr.SetMyArr(20);
 	cout << defArr;
 	GenerateRanArr();
+	cout << defArr;
+	SelectionSort();
 	cout << defArr;
 }

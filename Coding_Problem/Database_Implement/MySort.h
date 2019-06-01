@@ -20,7 +20,7 @@ namespace mysort {
 	MyArr defArr;
 	// Sort
 	void BubbleSort(int arr[] = defArr.arr, int & arrSize = defArr.arrSize);
-
+	void SelectionSort(int arr[] = defArr.arr, int & arrSize = defArr.arrSize);
 	
 
 	// Generator
