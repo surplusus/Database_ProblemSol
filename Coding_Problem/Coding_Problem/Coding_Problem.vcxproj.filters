@@ -44,5 +44,8 @@
     <ClCompile Include="baekjun9012.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Forming_a_Magic_Square.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
