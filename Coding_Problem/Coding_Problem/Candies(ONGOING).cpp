@@ -9,18 +9,24 @@ long candies(int n, vector<int> arr) {
 	long result = 0;
 	int len = arr.size();
 	vector<int> canBuk(n, 0);
-	canBuk[0] = 1;
-	// 왼쪽 -> 오른쪽
-	for (size_t i = 1; i < len-1; i++)
-	{
-		// 오른쪽보다 작다
-		//	왼쪽도 작다
-		if (arr[i - 1] > arr[i] && arr[i] < arr[i + 1])
-			canBuk[i] = 1;
-		// 왼쪽은 크다
-		if (arr[i - 1] < arr[i] && arr[i] < arr[i + 1])
-			canBuk[i] = canBuk[i - 1] + 1;
+	canBuk[0] = 1;	// 처음엔 무조건 1
 
+	// 왼쪽 -> 오른쪽
+	for (size_t i = 1; i < len; i++)
+	{
+		// 오른쪽보다 작은데
+		if (arr[i] < arr[i + 1])
+		{
+			// 왼쪽보다도 작다
+			if (arr[i - 1] > arr[i])
+				canBuk[i] = 1;
+			// 왼쪽보다는 크다
+			if (arr[i - 1] < arr[i])
+				canBuk[i] = canBuk[i - 1] + 1;
+		}
+		// 오른쪽보다 큰 경우
+		else
+			canBuk[i] = 1;
 	}
 	// 제일 마지막
 	if (arr[len - 1] > arr[len - 2])

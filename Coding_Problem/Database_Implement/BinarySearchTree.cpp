@@ -52,7 +52,6 @@ void InsertBT(PNode &pParent, int data)
 			return;
 		}
 	}
-
 }
 void DeleteBT(PNode pParent, int data)
 {
