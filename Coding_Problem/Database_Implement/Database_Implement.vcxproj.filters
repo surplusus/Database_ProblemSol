@@ -71,7 +71,7 @@
     <ClCompile Include="Hash.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="AVLtree.cpp">
+    <ClCompile Include="AVLtree%28ONGOING%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

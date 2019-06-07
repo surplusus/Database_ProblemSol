@@ -172,7 +172,7 @@
     <ClCompile Include="baekjun9012.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Candies%28ONGOING%29.cpp">
+    <ClCompile Include="Candies.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Coding_Problem.cpp">
