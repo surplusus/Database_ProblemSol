@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <queue>
+#include <vector>
 using namespace std;
 
 typedef struct Node {
@@ -13,6 +15,7 @@ typedef struct Node {
 class AVL {
 protected:
 	PNode root;
+	queue<PNode> que;
 public:
 	AVL();
 	AVL(int _data);
@@ -20,10 +23,11 @@ public:
 	void Insert(int _data);
 	void Search(int _data);
 	void Delete(int _data);
+	void PrintByLevel();
 private:
+	void PrintByLevel(PNode & root);
 	void Insert(PNode & _curr, PNode & parent, int _data);
 	PNode Search(const PNode & _curr, int _data);
-	void Delete(PNode & _curr, int _data);
 	bool Balancing(PNode & _curr);
 	int GetHeight(const PNode & _curr) const;
 	int DiffHeight(const PNode & _curr) const;
@@ -32,7 +36,6 @@ private:
 	void LRRotation(PNode & _curr);
 	void RLRotation(PNode & _curr);
 	friend istream & operator>>(istream & is, AVL & a);
-	friend ostream & operator<<(ostream & os, const AVL & a);
 };
 
 int main()
@@ -44,7 +47,7 @@ int main()
 	p.Insert(4);
 	p.Insert(1);
 	p.Insert(9);
-
+	p.PrintByLevel();
 	return 0;
 }
 
@@ -78,7 +81,11 @@ void AVL::Insert(PNode & _curr, PNode & _parent, int _data)
 {
 	if (_curr== nullptr)
 	{
-		AVL(_data);
+		root = new Node;
+		root->data = _data;
+		root->LChild = nullptr;
+		root->RChild = nullptr;
+		root->Parent = nullptr;
 	}
 	else
 	{
@@ -93,7 +100,7 @@ void AVL::Insert(PNode & _curr, PNode & _parent, int _data)
 				newNode->Parent = _curr;
 				_curr->LChild = newNode;
 				// 부모가 문제? (문제판별)
-				if (GetHeight(_curr) - GetHeight(_parent->RChild) > 1)
+				if (GetHeight(_curr) - GetHeight(_parent->RChild) > 1 && _parent!=nullptr)
 					// RR or RL
 					Balancing(_curr);
 				return;
@@ -111,7 +118,7 @@ void AVL::Insert(PNode & _curr, PNode & _parent, int _data)
 				newNode->Parent = _curr;
 				_curr->RChild = newNode;
 				// 부모가 문제? 
-				if (GetHeight(_parent->LChild) - GetHeight(_curr) < -1)
+				if (GetHeight(_parent->LChild) - GetHeight(_curr) < -1 && _parent != nullptr)
 					// LL or LR
 					Balancing(_curr);
 				return;
@@ -132,6 +139,76 @@ void AVL::Search(int _data)
 		cout << "찾았따! " << _data << endl;
 	else
 		cout << _data << " 없~다!" << endl;
+}
+
+void AVL::Delete(int _data)
+{
+	// data의 노드위치를 curr로 설정
+	PNode curr = Search(root, _data);
+	// 대체할 노드를 찾는다.
+	PNode replacement = curr;
+	// curr에 왼쪽에 자식이 있으면 왼쪽자식의 가장 오른쪽 끝 자식
+	if (curr->LChild != nullptr)
+	{
+		replacement = curr->LChild;
+		while (replacement->RChild == nullptr)
+			replacement = replacement->RChild;
+	}
+	// curr 오른쪽에 자식이 있으면 오른쪽 자식의 가장 왼족 끝 자식
+	else if(curr->RChild != nullptr)
+	{
+		replacement = curr->RChild;
+		while (replacement->LChild == nullptr)
+			replacement = replacement->LChild;
+	}
+	// curr에 자식이 없으면 마지막 노드이므로 그냥 지운다
+	else
+	{
+		curr->Parent = nullptr;
+		delete curr;
+		cout << _data << " 는 마지막노드, 그냥 지운다" << endl;
+		return;
+	}
+	// replace와 curr의 데이타만 swap
+	swap(curr->data, replacement->data);
+	// replacement 노드 지우기
+	delete replacement;
+	cout << _data << " 를 지웠습니다" << endl;
+	while (curr != root)
+	{
+		curr = curr->Parent;
+		if (abs(DiffHeight(curr)) > 1)
+			Balancing(curr);
+	}
+}
+
+void AVL::PrintByLevel()
+{
+	cout << "레벨별로 출력합니다" << endl;
+	PrintByLevel(root);
+}
+
+void AVL::PrintByLevel(PNode & root)
+{
+	cout << root->data << endl;
+	PNode tmp = root;
+	que.push(tmp);
+	while (true)
+	{
+		// 출력하기전에 자식들이 있으면 넣는다
+		int queueSize = que.size();
+		for (int i = 0; i < queueSize; i++)
+		{
+			if (que.front()->LChild != nullptr)
+				que.push(que.front()->LChild);
+			if (que.front()->RChild != nullptr)
+				que.push(que.front()->RChild);
+			cout << que.front() << "   ";
+			que.pop();
+		}
+		// 제일 앞에 있는애를 출력하고 꺼낸다
+		cout << endl;
+	}
 }
 
 PNode AVL::Search(const PNode & _curr, int _data)
@@ -199,6 +276,7 @@ bool AVL::Balancing(PNode & curr)
 		{
 			LRRotation(curr);
 		}
+		return true;
 	}
 	else if (factor < -1)
 	{
@@ -211,12 +289,14 @@ bool AVL::Balancing(PNode & curr)
 		{
 			RRRotation(curr);
 		}
+		return true;
 	}
+	return false;
 }
 int AVL::GetHeight(const PNode & _curr) const
 {
 	int hgt = 0;
-	if (_curr)
+	if (_curr != nullptr)
 	{
 		int left = GetHeight(_curr->LChild);
 		int right = GetHeight(_curr->RChild);
@@ -234,14 +314,13 @@ int AVL::DiffHeight(const PNode & _curr) const
 
 void AVL::LLRotation(PNode & _curr)
 {
-	PNode tmp;
+	PNode tmp = _curr->LChild;
 	// 부모의 왼쪽 자식인가? 오른쪽 자식인가?
 	if (_curr->Parent->LChild == _curr)
 		_curr->Parent->LChild = tmp;
 	if (_curr->Parent->RChild == _curr)
 		_curr->Parent->RChild = tmp;
 
-	tmp = _curr->LChild;
 	_curr->LChild = tmp->RChild;
 	_curr->LChild->Parent = _curr;
 	tmp->RChild = _curr;
@@ -249,14 +328,13 @@ void AVL::LLRotation(PNode & _curr)
 }
 void AVL::RRRotation(PNode & _curr)
 {
-	PNode tmp;
+	PNode tmp = _curr->RChild;
 	// 부모의 왼쪽 자식인가? 오른쪽 자식인가?
 	if (_curr->Parent->LChild == _curr)
 		_curr->Parent->LChild = tmp;
 	if (_curr->Parent->RChild == _curr)
 		_curr->Parent->RChild = tmp;
 	
-	tmp = _curr->RChild;
 	_curr->RChild = tmp->LChild;
 	_curr->RChild->Parent = _curr;
 	tmp->LChild = _curr;
@@ -305,11 +383,4 @@ istream & operator>>(istream & is, AVL & a)
 	is >> data;
 	a.Insert(data);
 	return is;
-}
-
-ostream & operator<<(ostream & os, const AVL & a)
-{
-	cout << "각 레벨 데이타 출력" << endl;
-	
-	cout << "정렬된 데이터 출력" << endl;
 }
