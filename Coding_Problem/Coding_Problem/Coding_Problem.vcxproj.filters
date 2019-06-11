@@ -53,5 +53,8 @@
     <ClCompile Include="Climb_the_leaderboard.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="버프신발.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
