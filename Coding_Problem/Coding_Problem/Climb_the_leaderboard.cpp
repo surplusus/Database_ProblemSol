@@ -10,59 +10,50 @@ vector<string> split_string(string);
 
 // Complete the climbingLeaderboard function below.
 vector<int> climbingLeaderboard(vector<int> scores, vector<int> alice) {
-	//using std::iterator;
-	//int sSize = scores.size();
-	//int asize = alice.size();
-	//vector<int> result((int)alice.size());
-	//// score만큼 할당하고
-	//vector<int> sCpy((int)scores.size());
-	//// score를 복사하고    copy(복사 시작 위치, 복사 끝위치, 복사 시작할 곳)
-	//copy(scores.begin(), scores.end(), sCpy.begin());
-	//
-	///*  복사하는 다른 방법
-	//sCpy.clear();
-	//sCpy.assign(scores.begin(), scores.end());
-	//*/
-	//
-	//// iterator(순환 포인터역할)에 할당한다
-	//vector<int>::iterator new_end = unique(sCpy.begin(), sCpy.end());
-	//// 중복을 지운다    vector.erase(지우기 시작할 위치 바로전, 지우기 끝낼위치)
-	//sCpy.erase(new_end, sCpy.end());
-	////// vector1에 담긴 원소들의 표준 출력 스트림으로 출력
-	////copy(vector1.begin(), vector1.end(), ostream_iterator<int>(cout, " "));
-	////cout << endl;
-	//int i = 0;
-	//while (i != alice.size())
-	//{
-	//	result[i] = 1;
-	//	for (new_end = sCpy.begin(); new_end != sCpy.end(); ++new_end)
-	//	{
-	//		if (alice[i] < *new_end)
-	//			result[i] += 1;
-	//		else
-	//			break;
-	//	}
-	//	i++;
-	//}
-	int sSize = scores.size();
+	
 	int asize = alice.size();
 	vector<int> result((int)alice.size());
 
-	vector<int>::iterator new_end;
-	for (int i = 0; i < asize; ++i) {
-		result[i] = 1;
-		for (new_end = scores.begin(); new_end != scores.end(); ++new_end) {
-			if (alice[i] < *new_end)
-			{
-				if (new_end != scores.begin())
-					if (*(new_end - 1) == *new_end)
-						continue;
-				result[i] += 1;
-			}
+	// 백터 중복을 제거
+	vector<int>::iterator new_end = unique(scores.begin(), scores.end());
+	scores.erase(new_end, scores.end());
+	scores.shrink_to_fit();
+	int sSize = scores.size();
 
+	// 이진탐색
+	int left, right, mid;
+	for (int i = 0; i < asize; i++)
+	{
+		left = 0; right = sSize - 1;
+		if (alice[i] >= scores[left])
+		{
+			result[i] = 1;
+			continue;
+		}
+		else if (alice[i] < scores[right])
+			result[i] = sSize + 1;
+		else
+		{
+			while (left + 1 != right)
+			{
+				mid = (left + right) / 2;
+				if (scores[mid] == alice[i])
+				{
+					result[i] = mid +1;
+					break;
+				}
+				else
+				{
+					if (alice[i] < scores[mid])
+						left = mid;
+					else
+						right = mid;
+				}
+				result[i] = (left +1)+1;
+			}
 		}
 	}
-
+	
 	return result;
 }
 
