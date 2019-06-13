@@ -10,7 +10,8 @@ vector<string> split_string(string);
 
 // Complete the climbingLeaderboard function below.
 vector<int> climbingLeaderboard(vector<int> scores, vector<int> alice) {
-	//using std::iterator;
+	/*
+		//using std::iterator;
 	//int sSize = scores.size();
 	//int asize = alice.size();
 	//vector<int> result((int)alice.size());
@@ -22,7 +23,7 @@ vector<int> climbingLeaderboard(vector<int> scores, vector<int> alice) {
 	///*  복사하는 다른 방법
 	//sCpy.clear();
 	//sCpy.assign(scores.begin(), scores.end());
-	//*/
+	//
 	//
 	//// iterator(순환 포인터역할)에 할당한다
 	//vector<int>::iterator new_end = unique(sCpy.begin(), sCpy.end());
@@ -44,22 +45,46 @@ vector<int> climbingLeaderboard(vector<int> scores, vector<int> alice) {
 	//	}
 	//	i++;
 	//}
+	*/
+
 	int sSize = scores.size();
 	int asize = alice.size();
 	vector<int> result((int)alice.size());
 
 	vector<int>::iterator new_end;
 	for (int i = 0; i < asize; ++i) {
-		result[i] = 1;
-		for (new_end = scores.begin(); new_end != scores.end(); ++new_end) {
-			if (alice[i] < *new_end)
+		int left, mid, right;
+		left = 0; right = sSize - 1; mid = sSize / 2;
+		if (scores[right] < alice[i])
+		{
+			result[i] = sSize;
+			continue;
+		}
+		while (left + 1 != right)
+		{
+			
+			if (scores[mid] < alice[i])
 			{
-				if (new_end != scores.begin())
-					if (*(new_end - 1) == *new_end)
-						continue;
-				result[i] += 1;
+				right = mid - 1;
+				mid = (right + left) / 2;				\
+				result[i] = left;
 			}
-
+			else if (scores[mid] > alice[i])
+			{
+				left = mid + 1;
+				mid = (right + left) / 2;
+				result[i] = left;
+			}
+			else
+			{
+				result[i] = mid;
+				break;
+			}
+		}
+		if (scores[left] > alice[i])
+		{
+			result[i] = 1;
+			continue;
 		}
 	}
 

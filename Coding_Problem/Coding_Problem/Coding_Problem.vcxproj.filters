@@ -56,12 +56,6 @@
     <ClCompile Include="버프신발.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="C++기본.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="C++기본1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="baekjoon7576.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
