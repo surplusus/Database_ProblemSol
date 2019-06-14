@@ -177,6 +177,10 @@
       </SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="practiceDFS.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="버프신발.cpp">
       <SubType>
       </SubType>
