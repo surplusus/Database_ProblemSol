@@ -9,24 +9,29 @@ const int OUTPUT_LiMIT = 1000000007;
 // Loop func
 unsigned long long 질병통제센터1(int A, int B, unsigned long long T)
 {
-	unsigned long long result = B;	//T = 1 일때 값과 같다.
-	T /= 2;
+	unsigned long long result = 1;	//T = 0 일때 값과 같다.
+	unsigned long long npow = B;
 	while (true)
 	{
-		// (탈출)T=0 일때 1을 곱하는 것이므로 나온다.
-		if (T == 0)
-			break;
-		//일단 2배로 만든다
-		result = result * result;
-		// T가 홀수 이면 B만 한번더 곱한다
+		// T가 홀수 이면
 		if (T % 2 == 1)
-			result *= B;
+		{
+			// 2 배 만들던 놈을 곱한다.
+			result *= npow;
+			result %= OUTPUT_LiMIT;
+			// (탈출)T=1 일때 B을 곱하고 나온다.
+			if (T == 1)
+				break;
+		}
 
-		result %= OUTPUT_LiMIT;
+		// 2배로 만든다
+		npow = npow * npow;
+		npow %= OUTPUT_LiMIT;
+		
 		T /= 2;
 	}
-
-	return A * result;
+	result = A * result % OUTPUT_LiMIT;
+	return result;
 }
 // recursive func
 unsigned long long 질병통제센터2(int B, unsigned long long T)
@@ -51,15 +56,18 @@ unsigned long long 질병통제센터2(int B, unsigned long long T)
 
 	// (예외) T가 1일때, B를 두번 곱할일이 없다
 	if (T == 1)
-		return recur * B;
+		return recur * B % OUTPUT_LiMIT;
 
 	// 작은 단위로 쪼개진 이후 실행할 일들
 	unsigned long long result = recur * recur;
+	result %= OUTPUT_LiMIT;
+	
 	// (예외)T가 홀수 일때
 	if (T % 2 == 1)
+	{
 		result *= B;
-
-	result %= OUTPUT_LiMIT;
+		result %= OUTPUT_LiMIT;
+	}
 	return result;
 }
 

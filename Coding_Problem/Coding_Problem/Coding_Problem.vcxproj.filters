@@ -62,10 +62,13 @@
     <ClCompile Include="이기는경우의수.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="질병통제센터%28ONGOING%29.cpp">
+    <ClCompile Include="질병통제센터.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="practiceDFS.cpp">
+    <ClCompile Include="practiceDFS%28stack%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="practiceDFS(recursive).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

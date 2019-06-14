@@ -89,12 +89,12 @@ int DFS(const vector<vector<int> > & board, int nPick)
 		NODE cur = st.top();
 		do
 		{
+			cur = st.top();
 			st.pop();
 			int ccol = cur.coordinate.first;
 			int crow = cur.coordinate.second;
 			vst[ccol][crow] = 0;
 			int path = cur.path;
-			//bool isEnd = true;
 			// 사방 탐색
 			for (size_t i = 0; i < 4; i++)
 			{
@@ -103,17 +103,14 @@ int DFS(const vector<vector<int> > & board, int nPick)
 				if (vst[cc][cr] == 1)
 				{
 					st.push(NODE(cc, cr, path + 1));
-					vst[cc][cr] = 0;
+					
 				}
 			}
-			// 막다른 길이면 visit 초기화
-			//if (isEnd)	ClearVST(nPick);
 
 			result = result <= path ? path : result;
-
-			cur = st.top();
-			// 제일 위에껄 봤더니 1이 있으면 처음에 넣었던 노드이니 나간다.
-		} while (cur.path != 1);
+			
+			// 제일 위에껄 봤더니 1이 있으면 처음에 넣었던 노드이니 visit 초기화.
+		} while (cur.path != 1 && !st.empty());
 		ClearVST(nPick, board);
 	}
 
