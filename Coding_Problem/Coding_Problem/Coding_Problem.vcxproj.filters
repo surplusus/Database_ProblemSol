@@ -59,5 +59,11 @@
     <ClCompile Include="baekjoon7576.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="이기는경우의수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="질병통제센터%28ONGOING%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
