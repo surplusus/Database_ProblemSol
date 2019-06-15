@@ -11,8 +11,8 @@ typedef struct NODE {
 	int path;
 	NODE(int col, int row, int p) : coordinate(make_pair(col, row)), path(p) {}
 };
-int col[4] = { -1,1,0,0 };
-int row[4] = { 0,0,1,-1 };
+int col[4] = { 1,-1,0,0 };
+int row[4] = { 0,0,1,-1};
 int vst[1001][1001] = { 0, };
 
 void ClearVST(int nPick, const vector<vector<int> > & board);
@@ -91,6 +91,7 @@ int DFS(const vector<vector<int> > & board, int nPick)
 		{
 			cur = st.top();
 			st.pop();
+
 			int ccol = cur.coordinate.first;
 			int crow = cur.coordinate.second;
 			vst[ccol][crow] = 0;
@@ -110,7 +111,7 @@ int DFS(const vector<vector<int> > & board, int nPick)
 			result = result <= path ? path : result;
 			
 			// 제일 위에껄 봤더니 1이 있으면 처음에 넣었던 노드이니 visit 초기화.
-		} while (cur.path != 1 && !st.empty());
+		} while (!st.empty() && st.top().path != 1);
 		ClearVST(nPick, board);
 	}
 
