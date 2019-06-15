@@ -177,10 +177,6 @@
       </SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="FunctionalTail.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
     <ClCompile Include="practiceDFS%28stack%29.cpp">
       <SubType>
       </SubType>

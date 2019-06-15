@@ -79,8 +79,7 @@ int DFS(const vector<vector<int> > & board, int nPick)
 				vst[i][j] = 1;
 			}
 		}
-
-
+	
 	int result = -1;
 
 	// Å½»ö ½ÃÀÛ
