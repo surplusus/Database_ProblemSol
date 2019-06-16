@@ -185,6 +185,7 @@
     <ClCompile Include="practiceDFS(recursive).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="practiceDFS(struct).cpp" />
     <ClCompile Include="버프신발.cpp">
       <SubType>
       </SubType>
