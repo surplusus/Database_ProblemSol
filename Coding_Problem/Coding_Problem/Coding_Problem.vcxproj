@@ -177,6 +177,10 @@
       </SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Roads_and_Libraries.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="practiceDFS%28stack%29.cpp">
       <SubType>
       </SubType>
@@ -185,7 +189,9 @@
     <ClCompile Include="practiceDFS(recursive).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="practiceDFS(struct).cpp" />
+    <ClCompile Include="practiceDFS(struct).cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="버프신발.cpp">
       <SubType>
       </SubType>
@@ -219,6 +225,9 @@
       </SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="result.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
