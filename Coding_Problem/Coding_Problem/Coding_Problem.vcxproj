@@ -177,7 +177,7 @@
       </SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Roads_and_Libraries.cpp">
+    <ClCompile Include="Roads_and_Libraries%28ONGOING%29.cpp">
       <SubType>
       </SubType>
     </ClCompile>

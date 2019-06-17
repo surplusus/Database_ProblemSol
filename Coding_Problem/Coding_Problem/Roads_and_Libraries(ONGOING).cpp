@@ -4,6 +4,7 @@
 #include <string>
 #include <numeric>
 #include <fstream>
+#include <stack>
 using namespace std;
 
 vector<string> split_string(string);
@@ -13,7 +14,7 @@ long roadsAndLibraries(int n, int c_lib, int c_road, vector<vector<int>> cities)
 	// n : count of cities 
 		// 무방향성 그래프 구현
 	vector<vector<int>> graph(n + 1);
-	for (int i = 1; i <= cities.size(); ++i) {
+	for (int i = 0; i < cities.size(); ++i) {
 		int x = cities[i][0];
 		int y = cities[i][1];
 		graph[x].push_back(y);
@@ -23,20 +24,48 @@ long roadsAndLibraries(int n, int c_lib, int c_road, vector<vector<int>> cities)
 	if (c_lib <= c_road)
 		return c_lib * n;
 	
-	int visit[100001] = { false, };
-	int curIdx = 1;
-	while (true)
+	// 백터를 넣을 스택 선언
+	stack<vector<int>> st;
+	 
+	int visit[100001] = { false, }; 
+	visit[0] = true;
+	int maxDist = 0;
+	int visitedCity = 0;
+	int countSeparateArea = 0;
+	vector<int> cur;
+	while(visitedCity != n)
 	{
-		visit[curIdx] = true;
-		for (int i = 0; i < graph[1].size(); i++)
+		for (int i = 1; i <= n; i++)
 		{
-
-
+			if (visit[i] == false)
+			{
+				st.push(graph[i]);
+				visit[i] = true;
+				visitedCity += 1;
+				break;
+			}
 		}
-		int countInMaxNode =
-			while (true)
+		while (!st.empty())
+		{
+			cur = st.top();
+			st.pop();
+			vector<int>::iterator iter;
+			for (iter = cur.begin(); iter != cur.end(); ++iter)
+			{
+				// 벡터 안에 값이 그래프에서 마킹한 곳이라면 push와 visit
+				if (visit[*iter] == false)
+				{
+					st.push(graph[*iter]);
+					visit[*iter] = true;
+					visitedCity += 1;
+					++maxDist;
+				}
+			}
+		}
+		++countSeparateArea;
 	}
-
+	int cityDemendingRoad = n - countSeparateArea;
+	return countSeparateArea * c_lib + cityDemendingRoad * c_road;
 }
 int main()
 {
