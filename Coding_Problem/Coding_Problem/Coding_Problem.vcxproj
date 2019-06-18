@@ -177,9 +177,14 @@
       </SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="baekjun2667.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="Roads_and_Libraries%28ONGOING%29.cpp">
       <SubType>
       </SubType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="practiceDFS%28stack%29.cpp">
       <SubType>

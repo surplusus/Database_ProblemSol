@@ -18,7 +18,7 @@ public:
 		is >> size;
 		data = vector<vector<int>>(size, vector<int>(size));
 		vst = vector<vector<bool>>(size, vector<bool>(size));
-		for (auto & row : data)		// 호성아 설명해줭
+		for (auto & row : data)		
 		{
 			for (auto & col : row)
 			{
