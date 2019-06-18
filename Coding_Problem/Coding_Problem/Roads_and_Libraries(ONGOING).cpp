@@ -5,14 +5,15 @@
 #include <numeric>
 #include <fstream>
 #include <stack>
+#include <map>
 using namespace std;
 
 vector<string> split_string(string);
+//int visit[100001] = { false, };
+map<int, bool> visit;
 
 // Complete the roadsAndLibraries function below.
 long roadsAndLibraries(int n, int c_lib, int c_road, vector<vector<int>> cities) {
-	// n : count of cities 
-		// 무방향성 그래프 구현
 	vector<vector<int>> graph(n + 1);
 	for (int i = 0; i < cities.size(); ++i) {
 		int x = cities[i][0];
@@ -23,48 +24,56 @@ long roadsAndLibraries(int n, int c_lib, int c_road, vector<vector<int>> cities)
 
 	if (c_lib <= c_road)
 		return c_lib * n;
-	
+
 	// 백터를 넣을 스택 선언
 	stack<vector<int>> st;
-	 
-	int visit[100001] = { false, }; 
-	visit[0] = true;
+
 	int maxDist = 0;
-	int visitedCity = 0;
 	int countSeparateArea = 0;
+	int cityDemendingRoad;
 	vector<int> cur;
-	while(visitedCity != n)
-	{
-		for (int i = 1; i <= n; i++)
-		{
-			if (visit[i] == false)
-			{
-				st.push(graph[i]);
+	while (true) {
+
+		bool flag = true;
+		for (int i = 1; i <= n; i++) {
+			if (visit[i] == false) {
 				visit[i] = true;
-				visitedCity += 1;
+				
+				if (graph[i].size() != 0)	// 새로만든 visit map 이라면 없을수 있다
+				{
+					st.push(graph[i]);
+					++countSeparateArea;
+				}
+				else
+					++countSeparateArea;
+				flag = false;
 				break;
 			}
+			// auto iter == visit.end())
 		}
-		while (!st.empty())
+		// 스텍에 넣을 새로운 city 노드가 없는 경우
+		if (flag == true)
 		{
+			cityDemendingRoad = n - countSeparateArea;
+			return countSeparateArea * c_lib + cityDemendingRoad * c_road;
+		}
+
+		while (!st.empty()) {
 			cur = st.top();
 			st.pop();
-			vector<int>::iterator iter;
-			for (iter = cur.begin(); iter != cur.end(); ++iter)
-			{
+			for (auto i : cur) {
 				// 벡터 안에 값이 그래프에서 마킹한 곳이라면 push와 visit
-				if (visit[*iter] == false)
+				if (visit[i] == false) // map에 키가 없으면 false로 생성이 된다.
 				{
-					st.push(graph[*iter]);
-					visit[*iter] = true;
-					visitedCity += 1;
+					st.push(graph[i]);
+					visit[i] = true;
 					++maxDist;
 				}
 			}
 		}
-		++countSeparateArea;
+
 	}
-	int cityDemendingRoad = n - countSeparateArea;
+
 	return countSeparateArea * c_lib + cityDemendingRoad * c_road;
 }
 int main()
