@@ -18,9 +18,21 @@ void InitMap()
 	// bool 형은 기본생성자에 false가 들어간다.
 	visit = vector<vector<bool>>(size, vector<bool>(size));
 	// range-based loop 이용 값 입력
+	int i = 0;
 	for (auto & row : map)	// auto & 는 역으로 값을 넣을 수도 있다.
 		for (auto & col : row)
-			cin >> col;
+		{
+			char tmp;
+			while (1)
+			{
+				tmp = getchar();
+				if (tmp != '\n')
+				{
+					col = tmp - '0';
+					break;
+				}
+			}
+		}
 }
 
 bool IsInArea(int x, int y)
@@ -31,7 +43,7 @@ bool IsInArea(int x, int y)
 		return true;
 }
 
-int DFS(int x, int y)
+int DFS(int y, int x)
 {
 	int dx[4] = { 1,-1,0,0 };
 	int dy[4] = { 0,0,1,-1 };
@@ -60,8 +72,13 @@ int main()
 	{
 		for (int j = 0; j < map.size(); j++)
 		{
-			rank.insert(DFS(i, j));
+			if (map[i][j] == 1)
+				rank.insert(DFS(i, j));
 		}
 	}
+
+	cout << rank.size() << endl;
+	for (auto i : rank)
+		cout << i << endl;
 	return 0;
 }

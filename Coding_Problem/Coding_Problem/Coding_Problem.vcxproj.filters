@@ -74,10 +74,10 @@
     <ClCompile Include="practiceDFS(struct).cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Roads_and_Libraries%28ONGOING%29.cpp">
+    <ClCompile Include="Roads_and_Libraries.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="baekjun2667.cpp">
+    <ClCompile Include="baekjun2667%28ONGOING%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
