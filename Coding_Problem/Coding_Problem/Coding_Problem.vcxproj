@@ -180,7 +180,7 @@
     <ClCompile Include="baekjun2667%28ONGOING%29.cpp">
       <SubType>
       </SubType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Roads_and_Libraries.cpp">
       <SubType>
