@@ -83,7 +83,13 @@
     <ClCompile Include="예제 map 사용법.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ShellSort_Implementation.cpp">
+    <ClCompile Include="FactoryMethod.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractFactory.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="FlyWeight.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
