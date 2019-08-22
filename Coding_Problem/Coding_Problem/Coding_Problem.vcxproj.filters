@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\DesignPattern">
+      <UniqueIdentifier>{1270d081-b92f-43a7-80aa-c1af13a71d01}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -83,14 +86,20 @@
     <ClCompile Include="예제 map 사용법.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="FactoryMethod.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="AbstractFactory.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\DesignPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="BuilderPattern.cpp">
+      <Filter>소스 파일\DesignPattern</Filter>
     </ClCompile>
     <ClCompile Include="FlyWeight.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\DesignPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryMethod.cpp">
+      <Filter>소스 파일\DesignPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateMethod.cpp">
+      <Filter>소스 파일\DesignPattern</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
