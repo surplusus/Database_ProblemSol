@@ -101,6 +101,9 @@
     <ClCompile Include="TemplateMethod.cpp">
       <Filter>소스 파일\DesignPattern</Filter>
     </ClCompile>
+    <ClCompile Include="dijstra(무방향).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="result.txt">
