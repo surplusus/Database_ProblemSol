@@ -16,10 +16,22 @@
     <Filter Include="소스 파일\DesignPattern">
       <UniqueIdentifier>{1270d081-b92f-43a7-80aa-c1af13a71d01}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\백준문제">
+      <UniqueIdentifier>{4015f7b2-bd86-4423-8e85-016c9fac4d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\참고자료">
+      <UniqueIdentifier>{f7bf2985-68cf-431b-ac20-711c6d05b8cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\프로그래머스">
+      <UniqueIdentifier>{1b18bbaf-a343-4dbc-8950-badc5f53cc28}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="예제 CooperativeMultitasker.h">
+      <Filter>소스 파일\DesignPattern</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -27,24 +39,6 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Coding_Problem.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjoon1463.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjoon2579.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjun2931.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjun4344.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjun10871.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjun9012.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Forming_a_Magic_Square.c">
@@ -57,9 +51,6 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="버프신발.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjoon7576.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="이기는경우의수.cpp">
@@ -80,9 +71,6 @@
     <ClCompile Include="Roads_and_Libraries.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="baekjun2667%28ONGOING%29.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="예제 map 사용법.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -101,8 +89,53 @@
     <ClCompile Include="TemplateMethod.cpp">
       <Filter>소스 파일\DesignPattern</Filter>
     </ClCompile>
-    <ClCompile Include="dijstra(무방향).cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="예제 책임연쇄.cpp">
+      <Filter>소스 파일\DesignPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="예제 state.cpp">
+      <Filter>소스 파일\DesignPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="예제 mediator.cpp">
+      <Filter>소스 파일\DesignPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="예제 CooperativeMultitasker.cpp">
+      <Filter>소스 파일\DesignPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="예제 component.cpp">
+      <Filter>소스 파일\DesignPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="baekjoon1463.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="baekjoon2579.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="baekjoon7576.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="baekjun2667%28ONGOING%29.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="baekjun2931.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="baekjun4344.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="baekjun9012.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="baekjun10871.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="dijkstra_BJ1753.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="generate 사용법.cpp">
+      <Filter>소스 파일\참고자료</Filter>
+    </ClCompile>
+    <ClCompile Include="완전탐색_모의고사.cpp">
+      <Filter>소스 파일\프로그래머스</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
