@@ -137,6 +137,24 @@
     <ClCompile Include="완전탐색_모의고사.cpp">
       <Filter>소스 파일\프로그래머스</Filter>
     </ClCompile>
+    <ClCompile Include="baekjoon2667(완전탐색DFS).cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="DFS(Recursion).cpp">
+      <Filter>소스 파일\참고자료</Filter>
+    </ClCompile>
+    <ClCompile Include="DFS(Stack).cpp">
+      <Filter>소스 파일\참고자료</Filter>
+    </ClCompile>
+    <ClCompile Include="BFS(Queue).cpp">
+      <Filter>소스 파일\참고자료</Filter>
+    </ClCompile>
+    <ClCompile Include="DFS_BFS_main.cpp">
+      <Filter>소스 파일\참고자료</Filter>
+    </ClCompile>
+    <ClCompile Include="인접행렬_인접리스트.cpp">
+      <Filter>소스 파일\참고자료</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="result.txt">
