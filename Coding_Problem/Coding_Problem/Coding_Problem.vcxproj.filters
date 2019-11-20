@@ -25,6 +25,9 @@
     <Filter Include="소스 파일\프로그래머스">
       <UniqueIdentifier>{1b18bbaf-a343-4dbc-8950-badc5f53cc28}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\HackerRank">
+      <UniqueIdentifier>{a48959a7-cf88-4e58-a01d-082fc91d0aa3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -39,15 +42,6 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Coding_Problem.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Forming_a_Magic_Square.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Candies.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Climb_the_leaderboard.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="버프신발.cpp">
@@ -136,6 +130,21 @@
     </ClCompile>
     <ClCompile Include="완전탐색_모의고사.cpp">
       <Filter>소스 파일\프로그래머스</Filter>
+    </ClCompile>
+    <ClCompile Include="Candies.cpp">
+      <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="Climb_the_leaderboard.cpp">
+      <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="Forming_a_Magic_Square.c">
+      <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="Extra_Long_Factorials.cpp">
+      <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="Strong_Password.cpp">
+      <Filter>소스 파일\HackerRank</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

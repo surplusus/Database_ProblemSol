@@ -21,18 +21,18 @@ long candies(int n, vector<int> arr) {
 			canBuk[i] = canBuk[i - 1] + 1;
 		// 왼쪽보다 작으면 걍 1
 		else
-			canBuk[i] = 1; 
+			canBuk[i] = 1;
 	}
 	// 제일 마지막
 
 	// 왼쪽 <- 오른쪽
-	for (int i = len - 1-1; i >= 0; --i)
+	for (int i = len - 1 - 1; i >= 0; --i)
 	{
 		// 오른쪽 값보다 크면 더한다
-			if (arr[i] > arr[i + 1])
-				// 오른쪽보다 왼쪽이 클때도 있음
-				if (canBuk[i] < canBuk[i+1] +1)
-					canBuk[i] = canBuk[i + 1] + 1;
+		if (arr[i] > arr[i + 1])
+			// 오른쪽보다 왼쪽이 클때도 있음
+			if (canBuk[i] < canBuk[i + 1] + 1)
+				canBuk[i] = canBuk[i + 1] + 1;
 	}
 	// canbuk 모두 더함
 	for (int i = 0; i < arr.size(); i++)
