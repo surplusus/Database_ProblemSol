@@ -28,6 +28,9 @@
     <Filter Include="소스 파일\HackerRank">
       <UniqueIdentifier>{a48959a7-cf88-4e58-a01d-082fc91d0aa3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\길찾기알고리즘">
+      <UniqueIdentifier>{47a850f2-706c-4722-80cf-e790c72ec375}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -145,6 +148,27 @@
     </ClCompile>
     <ClCompile Include="Strong_Password.cpp">
       <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="Array_Manipulation.cpp">
+      <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="baekjoon2667(완전탐색DFS).cpp">
+      <Filter>소스 파일\길찾기알고리즘</Filter>
+    </ClCompile>
+    <ClCompile Include="BFS(Queue).cpp">
+      <Filter>소스 파일\길찾기알고리즘</Filter>
+    </ClCompile>
+    <ClCompile Include="DFS(Recursion).cpp">
+      <Filter>소스 파일\길찾기알고리즘</Filter>
+    </ClCompile>
+    <ClCompile Include="DFS(Stack).cpp">
+      <Filter>소스 파일\길찾기알고리즘</Filter>
+    </ClCompile>
+    <ClCompile Include="DFS_BFS_main.cpp">
+      <Filter>소스 파일\길찾기알고리즘</Filter>
+    </ClCompile>
+    <ClCompile Include="인접행렬_인접리스트.cpp">
+      <Filter>소스 파일\길찾기알고리즘</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
