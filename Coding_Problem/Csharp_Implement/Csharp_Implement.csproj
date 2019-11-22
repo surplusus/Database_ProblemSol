@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Enumerable.cs" />
     <None Include="Hellosharp.cs" />
+    <Compile Include="EnumerableGeneric.cs" />
     <Compile Include="MainApp.cs" />
     <Compile Include="Matrix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
