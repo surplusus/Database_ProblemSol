@@ -224,6 +224,7 @@
       </SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="디버깅비쥬얼예제.cpp" />
     <ClCompile Include="큰수.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -233,6 +234,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="example.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="HARR.natvis" />
+    <Natvis Include="natvisSample.natvis" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

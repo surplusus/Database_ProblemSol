@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name ="HPOINT">
+    <DisplayString> Pos = X : {Position.X} Y : {Position.Y} Scale = X : {Scale.X} Y : {Scale.Y}</DisplayString>
+    <Expand>
+      <Item Name="[X]">X</Item>
+      <Item Name="[Y]">Y</Item>
+      <Item Name="[HX]">(int)(X * 0.5f)</Item>
+      <Item Name="[HY]">(int)(Y * 0.5f)</Item>
+    </Expand>
+  </Type>
+  <Type Name="HGAMERECT">
+    <DisplayString> Pos = X : {Positon.X} Y : {Position.Y} Scale = X : {Scale.X} Y : {Scale.Y}</DisplayString>
+    <Expand>
+      <Synthetic Name="[LT]">
+        <DisplayString> {Position.X - (int)(Scale.X * 0.5f)} , {Position.Y - (int)(Scale.Y * 0.5f)}</DisplayString>
+      </Synthetic>
+      <Synthetic Name="[RT]">
+        <DisplayString> {Position.X + (int)(Scale.X * 0.5f)} , {Position.Y - (int)(Scale.Y * 0.5f)}</DisplayString>
+      </Synthetic>
+      <Synthetic Name="[LB]">
+        <DisplayString> {Position.X - (int)(Scale.X * 0.5f)} , {Position.Y + (int)(Scale.Y * 0.5f)}</DisplayString>
+      </Synthetic>
+      <Synthetic Name="[RB]">
+        <DisplayString> {Position.X + (int)(Scale.X * 0.5f)} , {Position.Y + (int)(Scale.Y * 0.5f)}</DisplayString>
+      </Synthetic>
+    </Expand>
+  </Type>
+</AutoVisualizer>

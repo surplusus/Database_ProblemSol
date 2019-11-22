@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="HARR&lt;*&gt;">
+    <DisplayString>Array Size = {m_Size}</DisplayString>
+    <Expand>
+      <Item Name="[Size]" ExcludeView="simple">m_Size</Item>
+      <ArrayItems>
+        <Size>m_Size</Size>
+        <ValuePointer>Data</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+</AutoVisualizer>
