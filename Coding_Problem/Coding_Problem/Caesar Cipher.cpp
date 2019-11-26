@@ -34,6 +34,19 @@ string caesarCipher(string s, int k) {
 	return result;
 }
 
+// 다른 풀이
+//string caesarCipher(string s, int k) {
+//	for (int i = 0; i < s.length(); i++)
+//	{
+//		if (isalpha(s[i]))
+//		{
+//			char a = isupper(s[i]) ? 'A' : 'a';
+//			s[i] = a + (s[i] - a + k) % 26;
+//		}
+//	}
+//	return s;
+//}
+
 int main()
 {
 	int n;
