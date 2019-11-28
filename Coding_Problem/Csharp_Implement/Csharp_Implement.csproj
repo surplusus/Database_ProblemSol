@@ -59,9 +59,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicThread.cs" />
     <Compile Include="Enumerable.cs" />
+    <Compile Include="InterruptingThread.cs" />
+    <Compile Include="Serialization.cs" />
+    <Compile Include="Syncronize.cs" />
     <None Include="Hellosharp.cs" />
-    <Compile Include="EnumerableGeneric.cs" />
+    <None Include="EnumerableGeneric.cs" />
     <Compile Include="MainApp.cs" />
     <Compile Include="Matrix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
