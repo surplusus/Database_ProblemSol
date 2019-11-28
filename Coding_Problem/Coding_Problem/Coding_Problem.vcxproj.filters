@@ -170,7 +170,10 @@
     <ClCompile Include="인접행렬_인접리스트.cpp">
       <Filter>소스 파일\길찾기알고리즘</Filter>
     </ClCompile>
-    <ClCompile Include="Caeser Cipher.cpp">
+    <ClCompile Include="Caesar Cipher.cpp">
+      <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="Weighted Uniform Strings.cpp">
       <Filter>소스 파일\HackerRank</Filter>
     </ClCompile>
   </ItemGroup>
