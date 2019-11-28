@@ -176,6 +176,12 @@
     <ClCompile Include="Weighted Uniform Strings.cpp">
       <Filter>소스 파일\HackerRank</Filter>
     </ClCompile>
+    <ClCompile Include="Caeser Cipher.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Cycle Detection.cpp">
+      <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="result.txt">
