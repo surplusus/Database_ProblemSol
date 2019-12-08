@@ -244,6 +244,7 @@
     <ClCompile Include="generate 사용법.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Queue using Two Stacks.cpp" />
     <ClCompile Include="Roads_and_Libraries.cpp">
       <SubType>
       </SubType>
@@ -295,7 +296,9 @@
     <ClCompile Include="Forming_a_Magic_Square.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Caeser Cipher.cpp" />
+    <ClCompile Include="Caeser Cipher.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="예제 component.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
