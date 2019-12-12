@@ -59,7 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enumerable.cs" />
+    <None Include="Enumerable.cs" />
     <None Include="Hellosharp.cs" />
     <Compile Include="EnumerableGeneric.cs" />
     <Compile Include="MainApp.cs" />

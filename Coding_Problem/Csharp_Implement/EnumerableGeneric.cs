@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace Csharp_Implement
             }
             set
             {
-                if (idx <= array.Length)
+                if (idx >= array.Length)
                 {
                     Array.Resize<T>(ref array, idx + 1);
                     Console.WriteLine($"Array Resized : {array.Length}");
@@ -33,13 +34,6 @@ namespace Csharp_Implement
         }
         public int Length { get { return array.Length; } }
         public IEnumerator<T> GetEnumerator()
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                yield return array[i];
-            }
-        }
-        IEnumerator IEnumerable.GetEnumerator()
         {
             for (int i = 0; i < array.Length; i++)
             {
@@ -56,11 +50,20 @@ namespace Csharp_Implement
         {
             if (position == array.Length - 1)
             {
-                
+                Reset();
+                return false;
             }
+            ++position;
+            return (position < array.Length);
         }
-    }
-    class EnumerableGeneric
-    {
+        public void Dispose()
+        {
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            for (int i = 0; i < array.Length; ++i)
+                yield return array[i];
+        }
     }
 }
