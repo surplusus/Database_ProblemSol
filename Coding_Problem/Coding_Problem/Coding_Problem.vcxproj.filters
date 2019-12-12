@@ -185,6 +185,12 @@
     <ClCompile Include="Queue using Two Stacks.cpp">
       <Filter>소스 파일\HackerRank</Filter>
     </ClCompile>
+    <ClCompile Include="Simple Text Editor.cpp">
+      <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
+    <ClCompile Include="Balanced Brackets.cpp">
+      <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="result.txt">

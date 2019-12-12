@@ -198,6 +198,9 @@
       </SubType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Balanced Brackets.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BFS(Queue).cpp">
       <SubType>
       </SubType>
@@ -244,7 +247,9 @@
     <ClCompile Include="generate 사용법.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Queue using Two Stacks.cpp" />
+    <ClCompile Include="Queue using Two Stacks.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Roads_and_Libraries.cpp">
       <SubType>
       </SubType>
@@ -261,6 +266,7 @@
     <ClCompile Include="practiceDFS(struct).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Simple Text Editor.cpp" />
     <ClCompile Include="Strong_Password.cpp">
       <SubType>
       </SubType>
