@@ -266,7 +266,9 @@
     <ClCompile Include="practiceDFS(struct).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Simple Text Editor.cpp" />
+    <ClCompile Include="Simple Text Editor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Strong_Password.cpp">
       <SubType>
       </SubType>
@@ -275,6 +277,7 @@
     <ClCompile Include="TemplateMethod.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Truck Tour.cpp" />
     <ClCompile Include="Weighted Uniform Strings.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
