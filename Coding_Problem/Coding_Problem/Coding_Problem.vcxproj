@@ -269,6 +269,7 @@
     <ClCompile Include="Simple Text Editor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Sparse Arrays.cpp" />
     <ClCompile Include="Strong_Password.cpp">
       <SubType>
       </SubType>
@@ -277,7 +278,9 @@
     <ClCompile Include="TemplateMethod.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Truck Tour.cpp" />
+    <ClCompile Include="Truck Tour.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Weighted Uniform Strings.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

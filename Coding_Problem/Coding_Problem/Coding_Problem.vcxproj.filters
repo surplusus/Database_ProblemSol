@@ -194,6 +194,9 @@
     <ClCompile Include="Truck Tour.cpp">
       <Filter>소스 파일\HackerRank</Filter>
     </ClCompile>
+    <ClCompile Include="Sparse Arrays.cpp">
+      <Filter>소스 파일\HackerRank</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="result.txt">
