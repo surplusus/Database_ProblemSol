@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Coding_Problem", "Coding_Problem\Coding_Problem.vcxproj", "{9C6397F3-A5A9-4507-AC95-AEEA3477D835}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Database_Implement", "Database_Implement\Database_Implement.vcxproj", "{C9629298-BF9A-4B1B-BBBE-A9D91F9A85D8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_Implement", "Csharp_Implement\Csharp_Implement.csproj", "{D91C2268-5691-4376-9BCB-66E071EB1C98}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python_Prac_Coding_Problem", "Python_Prac_Coding_Problem\Python_Prac_Coding_Problem.pyproj", "{B8F147B7-3985-4088-B6E5-1905A82151EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,12 @@ Global
 		{D91C2268-5691-4376-9BCB-66E071EB1C98}.Release|x64.Build.0 = Release|Any CPU
 		{D91C2268-5691-4376-9BCB-66E071EB1C98}.Release|x86.ActiveCfg = Release|Any CPU
 		{D91C2268-5691-4376-9BCB-66E071EB1C98}.Release|x86.Build.0 = Release|Any CPU
+		{B8F147B7-3985-4088-B6E5-1905A82151EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F147B7-3985-4088-B6E5-1905A82151EA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B8F147B7-3985-4088-B6E5-1905A82151EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B8F147B7-3985-4088-B6E5-1905A82151EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F147B7-3985-4088-B6E5-1905A82151EA}.Release|x64.ActiveCfg = Release|Any CPU
+		{B8F147B7-3985-4088-B6E5-1905A82151EA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
