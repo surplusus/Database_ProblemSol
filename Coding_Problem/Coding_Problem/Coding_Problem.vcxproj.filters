@@ -203,9 +203,6 @@
     <ClCompile Include="baekjoon10974.cpp">
       <Filter>소스 파일\백준문제</Filter>
     </ClCompile>
-    <ClCompile Include="문제1번.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="result.txt">
