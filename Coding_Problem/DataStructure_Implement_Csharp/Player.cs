@@ -29,7 +29,7 @@ namespace DataStructure_Implement_Csharp
             DestY = y;
             return this;
         }
-        const long INTERVAL_TICK = 100;
+        const long INTERVAL_TICK = 50;
         long accumulateTick = 0;
         public void Update(long delta)
         {
@@ -40,11 +40,11 @@ namespace DataStructure_Implement_Csharp
             Update();
         }
         //상하좌우
-        int[] dx = new int[4] { 0, 0, -1, 1 };
-        int[] dy = new int[4] { -1, 1, 0, 0 };
+        int[] dx = new int[4] { -1, 0, 1, 0 };
+        int[] dy = new int[4] { 0, -1, 0, 1 };
         enum DIRECT
         {
-            UP = 0, DOWN = 1, LEFT, RIGHT,
+            LEFT = 0, UP = 1, RIGHT, DOWN, END
         }
         Random rand = new Random();
         void Update()
@@ -76,25 +76,49 @@ namespace DataStructure_Implement_Csharp
                 PosY = dr;
             }
         }
-        int fwX,fwY = 0;
+        int fPos = (int)DIRECT.END;
         void 우수법칙으로길찾기()
         {
             // 바라보는 방향 만들기
-            if (fwX == 0 && fwY == 0)
+            if (fPos == (int)DIRECT.END)
             {
                 for (int i = 0; i < 4; ++i)
                 {
-                    fwX = PosX + dx[i];
-                    fwY = PosY + dy[i];
+                    int fwY = PosY + dy[i];
+                    int fwX = PosX + dx[i];
                     if (maze.Grid[fwY, fwX] == GridType.Empty)
+                    {
+                        fPos = i;
                         break;
+                    }
                 }
             }
-            // 오른쪽으로 갈 수 있는지 확인
 
-            // 직진으로 갈 수 있는지 확인
-
-            // 왼쪽으로 간다
+            int left = fPos - 1;
+            int forward = (int)fPos;
+            int right = Math.Clamp((int)fPos + 1, 0, (int)DIRECT.END -1);
+            int[] dir = new int[4] { (fPos + 1) % 4, fPos, (fPos - 1 + 4) % 4, (fPos + 2) % 4 };
+            
+            int dr = 0, dc = 0;
+            Func<int, bool> func_IsAbleToRotate = delegate(int d)
+            {
+                dr = PosY + dy[d]; dc = PosX + dx[d];
+                if (maze.Grid[dr, dc] == GridType.Empty)
+                    return true;
+                return false;
+            };
+            //  
+            foreach (int d in dir)
+            {
+                dr = PosY + dy[d]; dc = PosX + dx[d];
+                if (maze.Grid[dr, dc] == GridType.Empty 
+                    && dr >0 && dc>0 && dr<maze.Size && dc<maze.Size)
+                {
+                    PosX = dc; PosY = dr;
+                    fPos = d;
+                    return;
+                }
+            }
         }
     }
 }

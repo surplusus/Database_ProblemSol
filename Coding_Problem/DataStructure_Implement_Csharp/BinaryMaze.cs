@@ -42,6 +42,11 @@ namespace DataStructure_Implement_Csharp
             {
                 for (int c = 1; c < lastEmpty; ++c)
                 {
+                    if (c + 1 == lastEmpty)
+                        maze.Grid[r + 1, c] = GridType.Empty;
+                    else if (r + 1 == lastEmpty)
+                        maze.Grid[r, c + 1] = GridType.Empty;
+
                     if (r % 2 == 1 && c % 2 == 1)
                     {
                         if (rand.Next(0, 2) == 0)
