@@ -1,14 +1,10 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DataStructure_Implement_Csharp
 {
-    public enum GridType
-    {
-        Empty,
-        Wall,
-    }
+
     class Program
     {
         public const char CIRCLE = '\u25cf';
@@ -43,9 +39,12 @@ namespace DataStructure_Implement_Csharp
             int accumulatedCount = 0;
             Console.CursorVisible = false;
             #endregion
+            var dest = new { X = 25 - 2, Y = 25 - 2 };
             var maze = new Maze();
             new BinaryMazeBuilder(maze).SetSize(25).SetDefaultMap().SetMaze();
             new SideWiderMazeBuilder(maze).SetSize(25).SetDefaultMap().SetMaze();
+            var player = new Player().SetStartPos(1, 1).SetMaze(maze).SetDestination(dest.X, dest.Y);
+            maze.SetDestination(dest.X, dest.Y).SetPlayer(player);
             while (true)
             {
                 #region 프로그램 중지 루틴
@@ -63,23 +62,24 @@ namespace DataStructure_Implement_Csharp
                 //    continue;
                 //currentTick = Environment.TickCount;
                 long elapsedTick = watch.ElapsedMilliseconds;
-                if (elapsedTick - currentTick < TIME_LIMIT)
+                long deltaTick = elapsedTick - currentTick;
+                if (deltaTick < TIME_LIMIT)
                     continue;
                 currentTick = watch.ElapsedMilliseconds;
 
                 long elapsedTime = watch.ElapsedMilliseconds;
                 accumulatedCount++;
-                if (elapsedTime - currentTime > 1000)
+                if (elapsedTime - currentTime >= 1000)
                 {
                     currentTime = elapsedTime;
                     FPS = accumulatedCount;
                     accumulatedCount = 0;
                 }
                 #endregion
-            // 입력
+                // 입력
 
-            // 로직
-
+                // 로직
+                player.Update(deltaTick);
             // 그리기
                 Console.SetCursorPosition(0, 0);
                 Console.WriteLine(FPS);
