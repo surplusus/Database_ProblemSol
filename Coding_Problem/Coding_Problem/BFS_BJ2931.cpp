@@ -1,5 +1,5 @@
 // baekjoon problem / 2931
-// 가스관
+// 가스관(DFS)
 
 #include<iostream>
 #include<queue>

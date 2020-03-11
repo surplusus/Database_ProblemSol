@@ -101,30 +101,6 @@
     <ClCompile Include="예제 component.cpp">
       <Filter>소스 파일\DesignPattern</Filter>
     </ClCompile>
-    <ClCompile Include="baekjoon1463.cpp">
-      <Filter>소스 파일\백준문제</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjoon2579.cpp">
-      <Filter>소스 파일\백준문제</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjoon7576.cpp">
-      <Filter>소스 파일\백준문제</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjun2667%28ONGOING%29.cpp">
-      <Filter>소스 파일\백준문제</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjun2931.cpp">
-      <Filter>소스 파일\백준문제</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjun4344.cpp">
-      <Filter>소스 파일\백준문제</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjun9012.cpp">
-      <Filter>소스 파일\백준문제</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjun10871.cpp">
-      <Filter>소스 파일\백준문제</Filter>
-    </ClCompile>
     <ClCompile Include="dijkstra_BJ1753.cpp">
       <Filter>소스 파일\백준문제</Filter>
     </ClCompile>
@@ -197,10 +173,40 @@
     <ClCompile Include="Sparse Arrays.cpp">
       <Filter>소스 파일\HackerRank</Filter>
     </ClCompile>
-    <ClCompile Include="baekjoon1182%28푸는중%29.cpp">
+    <ClCompile Include="marge.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="RecursiveDP_BJ1463.cpp">
       <Filter>소스 파일\백준문제</Filter>
     </ClCompile>
-    <ClCompile Include="baekjoon10974.cpp">
+    <ClCompile Include="%28ongoing%29BruteForce_BJ1182.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerNum_BJ1629.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="RecursiveDP_BJ2579.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="%28ongoing%29BFS_BJ2667.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="BFS_BJ7576.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="BFS_BJ10974.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="BFS_BJ2931.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="Average_BJ4344.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="Parse_BJ9012.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="Comparision_BJ10871.cpp">
       <Filter>소스 파일\백준문제</Filter>
     </ClCompile>
   </ItemGroup>
