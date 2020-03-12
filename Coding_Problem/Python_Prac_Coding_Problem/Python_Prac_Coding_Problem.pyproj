@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b8f147b7-3985-4088-b6e5-1905a82151ea</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LongestCommonString.py</StartupFile>
+    <StartupFile>LongestCommonSubsequence.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="LongestCommonString.py" />
+    <Compile Include="LongestCommonSubsequence.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Palindrome.py">
       <SubType>Code</SubType>
     </Compile>
