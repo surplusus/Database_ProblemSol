@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b8f147b7-3985-4088-b6e5-1905a82151ea</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LongestCommonSubsequence.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +22,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BFS_BJ7562.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FizzBuzz.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="List.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="LongestCommonString.py" />
@@ -31,7 +38,13 @@
     <Compile Include="Palindrome.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="tuples_hash.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="TurtleGraphics.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="%28오답%29새_신을_신고_뛰어보자.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
