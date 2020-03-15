@@ -212,8 +212,11 @@
     <ClCompile Include="BFS_BJ7562.cpp">
       <Filter>소스 파일\백준문제</Filter>
     </ClCompile>
+    <ClCompile Include="BFS_BJ2667.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
     <ClCompile Include="BFS_BJ7569.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\백준문제</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
