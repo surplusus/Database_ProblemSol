@@ -4,8 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b8f147b7-3985-4088-b6e5-1905a82151ea</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>greedy_1541.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,11 +27,18 @@
     <Compile Include="FizzBuzz.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="greedy_BJ11399.py">
+      <SubType>Code</SubType>
+      <Publish>True</Publish>
+    </Compile>
     <Compile Include="List.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="LongestCommonString.py" />
     <Compile Include="LongestCommonSubsequence.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="greedy_1541.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Palindrome.py">
