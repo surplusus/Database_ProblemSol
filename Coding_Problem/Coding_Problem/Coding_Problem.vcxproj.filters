@@ -19,9 +19,6 @@
     <Filter Include="소스 파일\백준문제">
       <UniqueIdentifier>{4015f7b2-bd86-4423-8e85-016c9fac4d2b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\참고자료">
-      <UniqueIdentifier>{f7bf2985-68cf-431b-ac20-711c6d05b8cf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\프로그래머스">
       <UniqueIdentifier>{1b18bbaf-a343-4dbc-8950-badc5f53cc28}</UniqueIdentifier>
     </Filter>
@@ -104,9 +101,6 @@
     <ClCompile Include="dijkstra_BJ1753.cpp">
       <Filter>소스 파일\백준문제</Filter>
     </ClCompile>
-    <ClCompile Include="generate 사용법.cpp">
-      <Filter>소스 파일\참고자료</Filter>
-    </ClCompile>
     <ClCompile Include="완전탐색_모의고사.cpp">
       <Filter>소스 파일\프로그래머스</Filter>
     </ClCompile>
@@ -127,9 +121,6 @@
     </ClCompile>
     <ClCompile Include="Array_Manipulation.cpp">
       <Filter>소스 파일\HackerRank</Filter>
-    </ClCompile>
-    <ClCompile Include="baekjoon2667(완전탐색DFS).cpp">
-      <Filter>소스 파일\길찾기알고리즘</Filter>
     </ClCompile>
     <ClCompile Include="BFS(Queue).cpp">
       <Filter>소스 파일\길찾기알고리즘</Filter>
@@ -217,6 +208,30 @@
     </ClCompile>
     <ClCompile Include="BFS_BJ7569.cpp">
       <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="다익스트라.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="크루스칼 알고리즘.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="모음이먼저나온순으로정렬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DFS_BJ1743.cpp">
+      <Filter>소스 파일\백준문제</Filter>
+    </ClCompile>
+    <ClCompile Include="인접행렬DFSwithLambda.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="%28ongoing%29FloodFill_BFS_DFS.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="generate 사용법.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소수구하는알고리즘.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
