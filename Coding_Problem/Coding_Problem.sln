@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Coding_Problem", "Coding_Problem\Coding_Problem.vcxproj", "{9C6397F3-A5A9-4507-AC95-AEEA3477D835}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Coding_Problem_In_C", "Coding_Problem_In_C\Coding_Problem_In_C.vcxproj", "{9C6397F3-A5A9-4507-AC95-AEEA3477D835}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Database_Implement", "Database_Implement\Database_Implement.vcxproj", "{C9629298-BF9A-4B1B-BBBE-A9D91F9A85D8}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python_Prac_Coding_Problem", "Python_Prac_Coding_Problem\Python_Prac_Coding_Problem.pyproj", "{B8F147B7-3985-4088-B6E5-1905A82151EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructure_Implement_Csharp", "DataStructure_Implement_Csharp\DataStructure_Implement_Csharp.csproj", "{346693B5-C225-4EA6-86F6-87F0F84CA809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coding_Problem_In_Csharp", "Coding_Problem_In_Csharp\Coding_Problem_In_Csharp.csproj", "{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,18 @@ Global
 		{346693B5-C225-4EA6-86F6-87F0F84CA809}.Release|x64.Build.0 = Release|Any CPU
 		{346693B5-C225-4EA6-86F6-87F0F84CA809}.Release|x86.ActiveCfg = Release|Any CPU
 		{346693B5-C225-4EA6-86F6-87F0F84CA809}.Release|x86.Build.0 = Release|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Debug|x64.Build.0 = Debug|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Debug|x86.Build.0 = Debug|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Release|x64.ActiveCfg = Release|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Release|x64.Build.0 = Release|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Release|x86.ActiveCfg = Release|Any CPU
+		{BEA0DCE2-F8AA-4568-90B8-EE389A839E0A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
