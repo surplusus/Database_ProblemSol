@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace algorithm {
+namespace LeetCode_Problem {
     public class TextJustification {
         public static string MinRemoveToMakeValid(string s) {
             Stack<int> openSt = new Stack<int>();

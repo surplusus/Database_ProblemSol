@@ -1,4 +1,4 @@
-namespace algorithm
+namespace LeetCode_Problem
 {
     public class FindPivotIndex
     {

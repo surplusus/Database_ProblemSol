@@ -1,4 +1,5 @@
 ﻿using System;
+using LeetCode_Problem;
 
 namespace Coding_Problem_In_Csharp {
     internal class Program {
