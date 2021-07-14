@@ -11,6 +11,7 @@
         <AssemblyName>Coding_Problem_In_Csharp</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,8 +39,10 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="BestTimeToBuyAndSellStock.cs" />
         <Compile Include="FindPivotIndex.cs" />
         <Compile Include="MajorityElement.cs" />
+        <Compile Include="MyPow.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="TextJustification.cs" />
